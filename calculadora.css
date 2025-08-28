@@ -1,0 +1,140 @@
+* {
+    box-sizing:  border-box;
+    margin: 0px;
+}
+
+body {
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    display: block;
+    background-color: #777777;
+    color: #eeeeee;
+    border: 6px solid cadetblue;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.calculadora {
+    margin: 60px auto;
+    background-color: #333333;
+    border-radius: 15px;
+    min-width: 350px;
+    min-height: 500px;
+    border: 3px solid black;
+    box-shadow:  0px 0px  20px 1px black;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(5, auto);
+    gap: 15px;
+    padding: 15px;
+    
+}
+
+.calculadora__pantalla {
+    grid-column: span 5;
+    margin: 10px;
+    border: 4px solid black;
+    box-shadow: 0px 0px 2px 1px;
+    background-color: #eeeeee;
+    max-height: 100px ;
+    max-width: 300px;
+}
+
+.calculadora__boton  {
+    background-color: cadetblue;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 5px 6px 1px black;
+}
+
+.calculadora__boton--operador {
+    background-color: gray;
+}
+
+.calculadora__boton--cero {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.calculadora__boton--uno {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.calculadora__boton--dos {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.calculadora__boton--tres {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.calculadora__boton--cuatro {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.calculadora__boton--cinco {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.calculadora__boton--seis {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.calculadora__boton--siete {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.calculadora__boton--ocho {
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+.calculadora__boton--nueve {
+    grid-area: 5 / 1 / 6 / 2;
+}
+
+.calculadora__boton--sumar {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.calculadora__boton--restar {
+    grid-area: 2 / 5 / 3 / 6;
+}
+
+.calculadora__boton--multiplicar {
+    grid-area: 3 / 4 / 4 / 5;
+}
+
+.calculadora__boton--dividir {
+    grid-area: 3 / 5 / 4 / 6;
+}
+
+.calculadora__boton--borrar {
+    grid-area: 4 / 4 / 5 / 5;
+}
+
+.calculadora__boton--decimal {
+    grid-area: 4 / 5 / 5 / 6;
+}
+
+.calculadora__boton--igual {
+    font-size: 20px;
+    grid-area: 5 / 2 / 6 / 6;
+}
+
+
+
+
+
+
+

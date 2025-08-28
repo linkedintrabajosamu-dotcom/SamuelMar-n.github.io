@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0px;
+    background: linear-gradient(135deg, #1d402b, #001f0c) ;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-attachment: fixed;
+}
+
+.perfil-main {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
+    grid-template-rows:repeat(5, auto);
+    grid-template-areas: 
+    "izquierda  izquierda projects"
+    "izquierda izquierda projects"
+    "contact contact contact"
+    "footer footer footer";
+}
+
+/*Comienza el header*/
+
+.perfil-header {
+    max-width: 60%;
+    margin: 0 auto 30px 30px;
+    padding: 20px;
+    font-size: 20px;
+    color: #B0B0B0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.perfil-header__titulo {
+    font-weight: 800;
+    opacity: 0;
+    transform: traslateY(-20px);
+    animation: slideInFromTop 2s ease-out forwards;
+}
+
+.perfil-header__enlaces   {
+    margin-top: 10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.perfil-header__enlaces-item {
+    color:#B0B0B0;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #6B8E23;
+    opacity: 0.6;
+    transition: background-color 0.2s ease-in 0s, transform 0.5s ease-out 0s;
+}
+
+.perfil-header__enlaces-item:hover {
+    border-color: #9ACD32;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.perfil-header__enlaces-item:active {
+    opacity: 1;
+    background-color: #B0B0B0;
+    color: #202020;
+}
+
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: traslateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: traslateY(0); 
+    }
+
+}
+
+/*Termina el header*/
+
+.seccion-estilos {
+    max-width: 90%;
+    padding: 10px;
+}
+
+.seccion-izquierda {
+    grid-area: izquierda;
+}
+
+/*comienza el acerca de mí*/
+
+.seccion-acerca-de {
+    color: #B0B0B0;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+
+/*Termina el acerca de mí*/
+
+/*Comienza la sección habilidades*/
+
+
+.seccion-habilidades{
+    background-color: rgba(51, 51, 51, 10%);
+    letter-spacing: 2px;
+    line-height: 20px;
+    color: #B0B0B0;
+}
+
+.seccion-habilidades ul {
+    line-height: 25px;
+}
+
+.seccion-habilidades strong {
+    font-weight: 900;
+}
+
+.seccion-habilidades__titulo {
+    text-align: center;
+}
+
+
+
+/*Termina la sección de habilidades*/
+
+/*Comienza seccion trayectoria*/
+
+.seccion-trayectoria {
+    color: #B0B0B0;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/*Termina seccion trayectoria*/
+
+/*Comienza sección de proyectos*/
+
+.seccion-proyectos {
+    background-color: rgba(51, 51, 51, 40%);
+    border-radius: 10px;
+    overflow-y: scroll;
+    box-shadow: 0px 0px 15px black;
+    margin: 30px auto;
+    color: #B0B0B0;
+    letter-spacing: 1px;
+    line-height: 25px;
+    text-align: center;
+    grid-area: projects;
+}
+
+.tarjeta-proyecto {
+    display: block;
+    text-decoration: none;
+}
+
+.tarjeta-proyecto img {
+    height: 150px;
+    margin: 20px;
+}
+
+#proyectos::-webkit-scrollbar {
+    display: none;
+    }
+
+.seccion-h3-p {
+    transition: background-color 1s ease;
+    border-radius: 20px;
+}
+
+.seccion-h3-p:hover {
+    background-color: #9ACD32;
+    border-radius: 20px;
+}
+
+
+
+/*Termina sección de proyectos*/
+
+/*Comienza sección de contacto*/
+
+.seccion-contacto {
+    background-color: #9c9c9c;
+    color: #333333;
+    padding: 20px;
+    grid-area: contact;
+}
+
+.seccion-contacto__item {
+    text-decoration: none;
+    transition: color 0.3s linear 0s;
+    margin: 10px;
+    list-style-type: none;
+}
+
+.fa-brands {
+    margin: 10px;
+    font-size: 30px;
+}
+
+
+/*Termina sección de contacto*/
+
+/*Comienza la sección de footer*/
+
+.perfil-footer {
+    background-color: #202020;
+    color: #F0F0F0;
+    font-size: 0.85rem;
+    padding: 20px 15px;
+    text-align: center;
+    grid-area: footer;
+}
+
+/*Termina la sección de footer*/
+
+@media screen and (max-width: 768px) {
+.perfil-main {
+    grid-template-columns: repeat(1, auto);
+    grid-template-areas:
+    "izquierda"
+    "projects"
+    "contact"
+    "footer";
+    }
+}
